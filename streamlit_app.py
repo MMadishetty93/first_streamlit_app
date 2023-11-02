@@ -18,6 +18,6 @@ streamlit.dataframe(myFruitList)
 
 streamlit.header('FruityVice fruit advice')
 
-fruit_choice = streamlit.textinput('Please select a fruit of your choice','kiwi')
+fruit_choice = streamlit.text_input('Please select a fruit of your choice','kiwi')
 streamlit.write(fruit_choice)
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
