@@ -17,9 +17,13 @@ streamlit.multiselect("Please select a fruit:",list(myFruitList.Fruit))
 streamlit.dataframe(myFruitList)
 
 streamlit.header('FruityVice fruit advice')
-fruityvice_respose = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_respose = requests.get("https://fruityvice.com/api/fruit/")
 
 streamlit.text(fruityvice_respose.json())
 
 fruityvide_normalize = pandas.json_normalize(fruityvice_respose.json())
 streamlit.dataframe(fruityvide_normalize)
+
+fruit_choice = streamlit.textinput('Please select a fruit of your choice','kiwi')
+streamlit.write(fruit_choice)
+
