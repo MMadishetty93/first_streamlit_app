@@ -19,7 +19,7 @@ streamlit.dataframe(myFruitList)
 streamlit.header('FruityVice fruit advice')
 fruityvice_respose = requests.get("https://fruityvice.com/api/fruit/watermelon")
 
-
+streamlit.text(fruityvice_respose.json())
 
 fruityvide_normalize = pandas.json_normalize(fruityvice_respose.json())
 streamlit.dataframe(fruityvide_normalize)
