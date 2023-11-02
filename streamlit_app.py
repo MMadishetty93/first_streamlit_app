@@ -17,7 +17,7 @@ streamlit.multiselect("Please select a fruit:",list(myFruitList.Fruit))
 streamlit.dataframe(myFruitList)
 
 streamlit.header('FruityVice fruit advice')
-fruityvice_respose = requests.get("https://fruityvice.com/api/frui/")
+fruityvice_respose = requests.get("https://fruityvice.com/api/fruit")
 
 streamlit.text(fruityvice_respose.json())
 
