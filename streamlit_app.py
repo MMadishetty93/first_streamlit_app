@@ -16,6 +16,7 @@ myFruitList = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/
 streamlit.multiselect("Please select a fruit:",list(myFruitList.Fruit))
 streamlit.dataframe(myFruitList)
 
+streamlit.header('FruityVice fruit advice')
 fruityvice_respose = requests.get("https://fruityvice.com/api/fruit/watermelon")
 
 streamlit.text(fruityvice_respose.json())
